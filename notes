@@ -1,3 +1,5 @@
 express
 mongoose
 dotenv
+crypto-js
+jsonwebtoken

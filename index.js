@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 //routes
 app.use(express.json());
 const userRoute = require('./routes/user');
+const authRoute = require('./routes/auth');
 
 //dotenv
 const dotenv = require('dotenv');
@@ -17,6 +18,7 @@ mongoose
     .catch((err) => console.log(err));
 
 //api
+app.use('/api/auth', authRoute);
 app.use('/api/user', userRoute);
 
 //server
