@@ -4,16 +4,16 @@ const ProductSchema = new mongoose.Schema(
     {
         title: {
             type: String,
-            required: true,
-            unique: true,
+            required: [true, 'Product title is required.'],
+            unique: [true, 'Product already exist'],
         },
         desc: {
             type: String,
-            required: true,
+            required: [true, 'Product description is required.'],
         },
         img: {
             type: String,
-            required: true,
+            required: [true, 'Please upload product Image'],
         },
         category: {
             type: Array,
@@ -25,7 +25,7 @@ const ProductSchema = new mongoose.Schema(
             type: String,
         },
         price: {
-            type: String,
+            type: Number,
             required: true,
         },
     },

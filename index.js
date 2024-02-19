@@ -4,8 +4,9 @@ const mongoose = require('mongoose');
 
 //routes
 app.use(express.json());
-const userRoute = require('./routes/user');
 const authRoute = require('./routes/auth');
+const userRoute = require('./routes/user');
+const productRoute = require('./routes/product');
 
 //dotenv
 const dotenv = require('dotenv');
@@ -19,7 +20,8 @@ mongoose
 
 //api
 app.use('/api/auth', authRoute);
-app.use('/api/user', userRoute);
+app.use('/api/users', userRoute);
+app.use('/api/products', productRoute);
 
 //server
 const PORT = 5000;
