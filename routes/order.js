@@ -1,9 +1,5 @@
 const router = require('express').Router();
-const {
-    verifyToken,
-    verifyTokenAndAuth,
-    verifyTokenAndAdmin,
-} = require('../routes/verifyToken');
+const { verifyToken, verifyTokenAndAdmin } = require('../routes/verifyToken');
 const CryptoJS = require('crypto-js');
 const Order = require('../models/Order');
 
